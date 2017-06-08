@@ -15,11 +15,11 @@ var imageData = "";
 })(jQuery);
 
 
-swarm.download($.QueryString["i"]).then(buffer => {
+swarm.download($.QueryString["i"]).then(function(buffer) {
     imageData = JSON.parse(buffer.toString());
+    var image = document.getElementById("image");
+    var caption = document.getElementById("caption");
+    image.src = imageData.image;
+    caption.innerHTML = imageData.caption;
 });
 
-var image = document.getElementById("image");
-var caption = document.getElementById("caption");
-image.src = imageData.image;
-caption.innerHTML = imageData.caption;

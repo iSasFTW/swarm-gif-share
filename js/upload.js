@@ -22,7 +22,7 @@ window.onload = function onpageload() {
     jQuery.get("./file4.txt", function(data) {
         img4_element.setAttribute("src", data);
     });
-}
+};
 
 function choose1() {
     chosenImage = document.getElementById("file1").src;
@@ -86,9 +86,9 @@ function uploadFile() {
     var info = new Object();
     info.image = chosenImage;
     info.caption = document.getElementById("imgcaption-input").value;
-    info.poster = web3.eth.account[0];
+    info.poster = web3.eth.accounts[0];
     var infoString = JSON.stringify(info);
-    swarm.upload(new Buffer(infoString)).then(hash => {
+    swarm.upload(new Buffer(infoString)).then(function(hash) {
         console.log(hash);
     });
         
