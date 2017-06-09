@@ -26,7 +26,13 @@
             <img src=" " alt="Image" id="image">
             <div id="infobox">
                 <p id="caption">This is a caption</p>
-                <input type="number">
+                <div>
+                    <input type="button" value="Tip!" id="tipbutton" class="btn btn-danger" onclick="openTip();">
+                    <div class="input-group" id="tipbox">
+                        <input type="number" class="form-control" id="inlineFormInputGroup" placeholder="Tip amount" min="5" step="5" id="tip-amount">
+                        <div class="input-group-btn"><button class="btn btn-danger" onclick="tip();">Tip!</button></div>
+                    </div>
+                </div>
             </div>
         </div>
         
