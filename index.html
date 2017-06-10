@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="swarm.min.js"></script>
     <script src="js/index.js"></script>
 </head>
 <body>
@@ -16,18 +17,19 @@
         <div id="logo-container">
             <a id="name-logo" href="index.html">Gifhive</a>
         </div>
-        <form class="form-inline" method="get" action="search">
-            <input type="search" name="q" class="form-control" id="searchbox">
-            <button class="btn" id="search-btn">Search</button>
-        </form>
-        
-        <p id="separator">or</p>
         
         <div id="upload-btn-container">
             <a class="btn" id="upload-btn" href="upload.html">Upload</a>
         </div>
-        <a href="i.html?i=f9e62e70b57a8e0f8119519f47d53d0686ca8301be8089069b62a99ea35fb322">Test link</a>
-
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>Most recent image:</p>
+        <div id="recent">
+            <img src=" " id="recentimage">
+            <a id="recentimagecaption" href=" "></a>
+        </div>
         <p id="account-p">Your address: <span id="account"></span></p>
     </div>
 </body>

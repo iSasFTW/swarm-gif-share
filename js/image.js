@@ -31,12 +31,41 @@ swarm.download($.QueryString["i"]).then(function(buffer) {
 function openTip() {
     document.getElementById("tipbutton").style.display = "none";
     $("#tipbox").show();
+    
 }
 
-function tip() {
-    var szaboAmount = $("#tip-amount").value;
+function tipSuccess() {
+    document.getElementById("successbox").innerHTML = '<div class="alert alert-success">Tip successful!</div>';
+    $("tipbox").hide();
+    document.getElementById("tipbutton").style.display = "inline";
+}
+
+
+var tipamount = 5;
+document.getElementById("tipamount").innerHTML = tipamount;
+
+function increasetip() {
+    tipamount = tipamount + 5;
+    document.getElementById("tipamount").innerHTML = tipamount;
+}
+
+function lowertip() {
+    if (tipamount != 0) {
+        tipamount = tipamount - 5;
+        document.getElementById("tipamount").innerHTML = tipamount;
+    }
+}
+
+
+
+$("#tipamountbutton").on("click", function(){
+    var szaboAmount = tipamount;
     var weiAmount = web3.toWei(szaboAmount, "szabo");
     var sender = web3.eth.accounts[0];
     var recipient = uploader;
-    web3.eth.sendTransaction({from: sender, to: recipient, value: weiAmount});
-}
+    web3.eth.sendTransaction({from: sender, to: recipient, value: weiAmount}, function(err) {
+        if (!err) {
+            tipSuccess();
+        }
+    });
+});

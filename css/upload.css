@@ -43,6 +43,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4b1f', endColorstr='#ff9068',GradientType=1 );
     color: white;
     border: none;
+    display: none;
 }
 
 .choosebox {

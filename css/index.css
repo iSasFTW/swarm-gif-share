@@ -33,25 +33,6 @@
     margin-top: 150px;
 }
 
-#separator {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    color:grey;
-}
-
-#separator:after,
-#separator:before {
-    content: "";
-    display: block;
-    background: grey;
-    width: 30%;
-    height:1px;
-    margin: 0 10px;
-}
 
 #upload-btn-container {
     text-align: center;
@@ -65,4 +46,12 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4b1f', endColorstr='#ff9068',GradientType=1 );
     color: white;
     border: none;
+}
+
+#recent {
+    text-align: center;
+}
+
+#recentimage {
+    width: 20em;
 }
